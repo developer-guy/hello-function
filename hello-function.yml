@@ -4,6 +4,7 @@ provider:
   gateway: http://127.0.0.1:8080
 functions:
   hello-function:
+    namespace: default
     lang: golang-http
     handler: ./hello-function
     image: devopps/hello-function:latest
