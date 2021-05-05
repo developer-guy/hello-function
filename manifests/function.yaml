@@ -4,4 +4,4 @@ metadata:
   name: hellofunction
 spec:
   name: hellofunction
-  image: devopps/hello-function:latest
+  image: __IMAGE__@__DIGEST__
