@@ -2,7 +2,6 @@ apiVersion: openfaas.com/v1
 kind: Function
 metadata:
   name: hellofunction
-  namespace: openfaas-fn
 spec:
   name: hellofunction
   image: devopps/hello-function:latest
