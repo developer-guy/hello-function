@@ -1,0 +1,32 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: openfaas-operator
+  namespace: argocd
+spec:
+  destination:
+    namespace: openfaas
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    helm:
+      parameters:
+        - name: basic_auth
+          value: "true"
+        - name: functionNamespace
+          value: openfaas-fn
+        - name: generateBasicAuth
+          value: "true"
+        - name: operator.create
+          value: "true"
+        - name: clusterRole
+          value: "true"
+    chart: openfaas
+    repoURL: https://openfaas.github.io/faas-netes
+    targetRevision: 7.2.8
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
