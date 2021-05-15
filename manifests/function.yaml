@@ -2,6 +2,7 @@ apiVersion: openfaas.com/v1
 kind: Function
 metadata:
   name: hellofunction
+  namespace: default
 spec:
   name: hellofunction
   image: __IMAGE__@__DIGEST__
