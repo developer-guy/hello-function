@@ -5,4 +5,4 @@ metadata:
   namespace: default
 spec:
   name: hellofunction
-  image: __IMAGE__@__DIGEST__
+  image: devopps/hello-function:latest@sha256:177061d7fc42a8bcc1fbeded36fc4f50970bcfb716b2b568477147cfc7816754
