@@ -4,5 +4,5 @@ metadata:
   name: hellofunction
   namespace: default
 spec:
+  image: devopps/hello-function:v1
   name: hellofunction
-  image: devopps/hello-function:latest@sha256:177061d7fc42a8bcc1fbeded36fc4f50970bcfb716b2b568477147cfc7816754
